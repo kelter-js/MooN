@@ -13,11 +13,27 @@
     <link rel="preload" href="fonts/open-sans-400.woff" as="font">
     <link rel="preload" href="fonts/open-sans-600.woff" as="font">
     <link rel="preload" href="fonts/open-sans-700.woff" as="font">
-    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/fav-icon.png" sizes="16x16" type="image/png">
     <link rel="manifest" href="/manifest.json">
   </head>
   <body class="page__body">
-
+    <header class="page-header">
+      <div class="container">
+        <a class="page-header__logo"><span class="visually-hidden">Логотип MooN</span></a>
+        <div class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <nav class="main-nav__navigation">
+            <div class="main-nav__wrapper">
+              <a class="main-nav__link" href="#about-us">О нас</a>
+              <a class="main-nav__link" href="#bicycles">Виды велосипедов</a>
+              <a class="main-nav__link" href="#video-bicycles">Видео про велосипеды</a>
+              <a class="main-nav__link" href="#contacts">Контакты</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <script src="/js/script.js"></script>
   </body>
 </html>

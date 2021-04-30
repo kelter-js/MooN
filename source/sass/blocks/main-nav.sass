@@ -1,0 +1,102 @@
+.main-nav
+  position: relative
+  display: flex
+  @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
+    position: static
+
+.main-nav__toggle
+  display: none
+  @media (max-width: $tablet-width-only)
+    position: absolute
+    top: 0
+    right: 0
+    display: block
+    width: 72px
+    height: 50px
+    cursor: pointer
+    border: none
+  @media (max-width: $mobile-width-only)
+    width: 50px
+
+.main-nav--opened
+  @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
+    min-height: 516px
+
+.main-nav--closed .main-nav__toggle:before
+  content: ""
+  position: absolute
+  top: 15px
+  left: 24px
+  width: 22px
+  height: 2px
+  background-color: $menu-buttons-color
+  box-shadow: 0 8px 0 0 $menu-buttons-color, 0 16px 0 0 $menu-buttons-color
+  @media (max-width: $mobile-width-only)
+    left: 14px
+
+.main-nav--closed .main-nav__toggle:active:before
+  background-color: fade($menu-buttons-color, 30%)
+  box-shadow: 0 8px 0 0 fade($menu-buttons-color, 30%), 0 16px 0 0 fade($menu-buttons-color, 30%)
+
+.main-nav--closed .main-nav__toggle
+  background-color: $red
+
+.main-nav--opened .main-nav__toggle
+  top: 0
+  right: 0
+  background-color: transparent
+
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    top: 24px
+    left: 15px
+    width: 40px
+    height: 1px
+    background-color: rgba($dark-color, 0.2)
+    @media (max-width: $mobile-width-only)
+      left: 5px
+
+  &:before
+    transform: rotate(45deg)
+    box-shadow: none
+
+  &:after
+    transform: rotate(-45deg)
+
+  &:active:before,
+  &:active:after
+    background-color: fade(rgba($dark-color, 0.2), 30%)
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width-only)
+  .main-nav--closed .main-nav__wrapper
+    display: none
+
+  .main-nav--nojs .main-nav__toggle
+    display: none
+
+  .main-nav--nojs .main-nav__wrapper
+    display: block
+
+.main-nav__link
+  margin-right: 15.5%
+  text-decoration: none
+  @include fstyle(16px, 32px, rgba($white, 0.7), 300)
+  letter-spacing: -0.8px
+  &:last-child
+    margin-right: 0px
+
+.main-nav__wrapper
+  position: relative
+  padding-left: 9.5%
+  width: 61vw
+  &:before
+    content: ""
+    position: absolute
+    top: 41px
+    left: 57px
+    width: 95%
+    height: 1px
+    background-color: rgba($white, 0.2)
+
