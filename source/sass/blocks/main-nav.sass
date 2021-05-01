@@ -1,6 +1,7 @@
 .main-nav
   position: relative
   display: flex
+  margin-left: 146px
   @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
     position: static
 
@@ -80,23 +81,34 @@
     display: block
 
 .main-nav__link
-  margin-right: 15.5%
+  margin-right: 135px
   text-decoration: none
   @include fstyle(16px, 32px, rgba($white, 0.7), 300)
   letter-spacing: -0.8px
   &:last-child
     margin-right: 0px
+    margin-left: 30px
+  @media (max-width: $pre-desktop-width)
+    margin-right: 15.5%
 
 .main-nav__wrapper
   position: relative
-  padding-left: 9.5%
-  width: 61vw
   &:before
     content: ""
     position: absolute
     top: 41px
-    left: 57px
-    width: 95%
+    left: -15px
     height: 1px
+    width: 100%
     background-color: rgba($white, 0.2)
+  @media (max-width: $pre-desktop-width)
+    &:before
+      left: -1vw
+      width: 63vw
 
+.main-nav__navigation
+  width: 873.5px
+  padding-top: 21px
+  @media (max-width: $pre-desktop-width)
+    padding-left: 12.5vw
+    width: 61vw
