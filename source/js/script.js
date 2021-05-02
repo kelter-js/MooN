@@ -88,19 +88,16 @@ const onInput = (evt) => {
         break;
       }
     }
-
     if (evt.key === 'ArrowLeft') {
       currentCaretPosition = PHONE_ELEMENT.selectionStart - 1;
       setRange(PHONE_ELEMENT, currentCaretPosition);
       return;
     }
-
     if (evt.key === 'ArrowRight') {
       currentCaretPosition = PHONE_ELEMENT.selectionStart + 1;
       setRange(PHONE_ELEMENT, currentCaretPosition);
       return;
     }
-
     if(evt.key === 'Backspace') {
       if (currentCaretPosition < MIN_RANGE) {
         setRange(PHONE_ELEMENT, MIN_RANGE);
@@ -220,12 +217,17 @@ const onInput = (evt) => {
           break;
         }
     }
-  PHONE_ELEMENT.value = `+7 (${numberExample[0]}${numberExample[1]}${numberExample[2]}) ${numberExample[3]}${numberExample[4]}${numberExample[5]} ${numberExample[6]}${numberExample[7]}-${numberExample[8]}${numberExample[9]}`;
-  if (evt.key === 'Delete') {
-    PHONE_ELEMENT.setSelectionRange(currentCaretPosition, currentCaretPosition);
-    return;
-  }
-  (evt.key === 'Backspace') ? PHONE_ELEMENT.setSelectionRange(--currentCaretPosition, currentCaretPosition) : PHONE_ELEMENT.setSelectionRange(++currentCaretPosition, currentCaretPosition);
+    PHONE_ELEMENT.value = `+7 (${numberExample[0]}${numberExample[1]}${numberExample[2]}) ${numberExample[3]}${numberExample[4]}${numberExample[5]} ${numberExample[6]}${numberExample[7]}-${numberExample[8]}${numberExample[9]}`;
+    if (evt.key === 'Delete') {
+      PHONE_ELEMENT.setSelectionRange(currentCaretPosition, currentCaretPosition);
+      return;
+    }
+    if (evt.key === 'Backspace') {
+      PHONE_ELEMENT.setSelectionRange(--currentCaretPosition, currentCaretPosition)
+    }
+    if(+evt.key) {
+      PHONE_ELEMENT.setSelectionRange(++currentCaretPosition, currentCaretPosition);
+    }
 };
 
 PHONE_ELEMENT.addEventListener('keydown', onInput);
