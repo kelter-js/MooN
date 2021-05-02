@@ -14,3 +14,14 @@ const onClickToggleNavigation = () => {
 }
 
 TOGGLE_NAVIGATION_BUTTON.addEventListener('click', onClickToggleNavigation);
+
+
+//
+
+const PHONE_ELEMENT = document.querySelector('#tel');
+
+const loger = () => {
+  PHONE_ELEMENT.value = '+7 (...)-...-..-..';
+};
+
+PHONE_ELEMENT.addEventListener('change', loger);
