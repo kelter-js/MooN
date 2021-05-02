@@ -39,7 +39,7 @@
   top: 0
   right: 0
   background-color: transparent
-  z-index: 1
+  z-index: 2
 
   &:before,
   &:after
@@ -135,5 +135,16 @@
     width: 100vw
     padding-top: 100px
     background-color: $white
+    &:before
+      display: none
+  @media (max-width: $mobile-width-only)
+    position: absolute
+    left: 0px
+    top: 0px
+    min-height: 568px
+    width: 100vw
+    padding-top: 100px
+    background-color: $white
+    z-index: 1
     &:before
       display: none
