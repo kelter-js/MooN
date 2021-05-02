@@ -84,6 +84,11 @@
 .page-header__wrapper
   display: flex
   flex-wrap: wrap
+  min-height: 825px
+  @media (max-width: $tablet-width-only)
+    min-height: 683px
+  @media (max-width: $mobile-width-only)
+    min-height: 750px
 
 .page-header__form
   width: 327px
