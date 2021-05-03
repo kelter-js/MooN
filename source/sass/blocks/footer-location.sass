@@ -1,9 +1,7 @@
 .page-footer__location
   margin-left: 105px
-
-.page-footer__map-interactive
-  min-height: 530px
-  width: 100%
+  @media (max-width: $tablet-width-only)
+    margin-left: 0px
 
 .page-footer__map-interactive iframe
   min-height: 530px
@@ -18,6 +16,12 @@
   padding-left: 360px
   @include fstyle(30px, 30px, $very-dark-black, 600)
   letter-spacing: -0.15px
+  @media (max-width: $tablet-width-only)
+    width: 23.5vw
+    margin-bottom: 20px
+    padding-left: 34vw
+    @include fstyle(24px, 30px, $very-dark-black, 600)
+    letter-spacing: -0.12px
 
 .page-footer__location p
   width: 555px
@@ -26,10 +30,17 @@
   padding-left: 201px
   @include fstyle(17px, 31px, rgba($black, 0.7))
   text-align: center
+  @media (max-width: $tablet-width-only)
+    width: 82vw
+    margin-bottom: 20px
+    padding-left: 4.5vw
 
 .page-footer__map-wrapper
   width: 957px
   min-height: 530px
+  @media (max-width: $tablet-width-only)
+    width: 698px
+    min-height: 545px
 
 .page-footer__map-wrapper--invisible
   display: none
