@@ -51,14 +51,21 @@
       <section class="page-footer__location">
         <h2>Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-        <picture>
-          <source type="image/webp" media="(min-width: 320px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-          <source media="(min-width: 320px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-          <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Наш адрес в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19">
-        </picture>
+
+        <div class="page-footer__map-interactive page-footer__map-interactive--invisible">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871610071!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1611154599473!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-label="Наш адрес в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19" tabindex="0"></iframe>
+        </div>
+
+        <div class="page-footer__map-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source media="(min-width: 320px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Наш адрес в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19">
+          </picture>
+        </div>
       </section>
       <section class="page-footer__contacts">
         <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
