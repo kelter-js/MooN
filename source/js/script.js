@@ -33,6 +33,7 @@ let numberExample = [
 ]
 
 const MIN_RANGE = 4;
+const MAX_RANGE = 17;
 const MASK_LENGTH = 10;
 const DEFAULT_VALUE = '_';
 const DEFAULT_MASK = `+7 (___) ___-__-__`;
@@ -53,11 +54,28 @@ const ALLOWED_RANGE = [
 const ALLOWED_PRESSED_KEYS = [
   'Backspace',
   'Delete',
-  'ArrowLeft',
-  'ArrowRight',
   'Control',
   'v',
 ];
+
+const findClosestEmptySlot = () => {
+  return PHONE_ELEMENT.value.split('').indexOf('_');
+}
+
+const setPositionNonInt = (position, neededToMove) => {
+    if (neededToMove) {
+      if (position <= MIN_RANGE) {
+        setRange();
+        return;
+      }
+      setRange(--position);
+    }
+    if (position < MIN_RANGE) {
+      setRange();
+      return;
+    }
+    setRange(position);
+}
 
 const SKIPPING_RANGE = {
   "0" : 4,
@@ -115,26 +133,21 @@ const filterField = (range, pressedButton, currentPosition) => {
   numberExample.length = MASK_LENGTH;
 };
 
+const FUNCTIONAL_BUTTONS = {
+  'Home' : () => PHONE_ELEMENT.setSelectionRange(MIN_RANGE, MIN_RANGE),
+  'End' : () => PHONE_ELEMENT.setSelectionRange(MAX_RANGE, MAX_RANGE),
+  'ArrowRight' : (position) => setRange(++position),
+  'ArrowLeft' : (position) => setPositionNonInt(position, true),
+  'Delete' : (position) => setPositionNonInt(position),
+  'Backspace' : (position) => setPositionNonInt(position, true),
+}
+
 const onInput = (evt) => {
   let pressedButton = evt.key;
-
-  if (pressedButton === ALLOWED_PRESSED_KEYS[4] || pressedButton === ALLOWED_PRESSED_KEYS[5]) return;
+  if (pressedButton === ALLOWED_PRESSED_KEYS[2] || pressedButton == ALLOWED_PRESSED_KEYS[3]) return;
 
   evt.preventDefault();
   let currentCaretPosition = PHONE_ELEMENT.selectionStart;
-  if (pressedButton === ALLOWED_PRESSED_KEYS[2]) {
-    if (+currentCaretPosition <= MIN_RANGE) {
-      setRange();
-      return;
-    }
-    setRange(--currentCaretPosition);
-    return;
-  }
-
-  if (pressedButton === ALLOWED_PRESSED_KEYS[3]) {
-    setRange(++currentCaretPosition);
-    return;
-  }
 
   if(+pressedButton || pressedButton === ALLOWED_PRESSED_KEYS[1]) {
     if (SKIPPING_RANGE[currentCaretPosition]) currentCaretPosition = SKIPPING_RANGE[currentCaretPosition];
@@ -146,20 +159,9 @@ const onInput = (evt) => {
 
   PHONE_ELEMENT.value = `+7 (${numberExample[0]}${numberExample[1]}${numberExample[2]}) ${numberExample[3]}${numberExample[4]}${numberExample[5]}-${numberExample[6]}${numberExample[7]}-${numberExample[8]}${numberExample[9]}`;
 
-  if (pressedButton === ALLOWED_PRESSED_KEYS[1]) {
-    if (currentCaretPosition < MIN_RANGE) {
-      setRange();
-      return;
-    }
-    PHONE_ELEMENT.setSelectionRange(currentCaretPosition, currentCaretPosition);
-  }
-
-  if (pressedButton === ALLOWED_PRESSED_KEYS[0]) {
-    if (currentCaretPosition <= MIN_RANGE) {
-      setRange();
-      return;
-    }
-    PHONE_ELEMENT.setSelectionRange(--currentCaretPosition, currentCaretPosition);
+  if (FUNCTIONAL_BUTTONS[pressedButton]) {
+    FUNCTIONAL_BUTTONS[pressedButton](currentCaretPosition);
+    return;
   }
 
   if(+pressedButton) {
@@ -173,17 +175,21 @@ const onPaste = (evt) => {
   numberExample = pasteNumber.map((integer, index) => numberExample[index] = integer);
   fillRest(numberExample);
   PHONE_ELEMENT.value = `+7 (${numberExample[0]}${numberExample[1]}${numberExample[2]}) ${numberExample[3]}${numberExample[4]}${numberExample[5]}-${numberExample[6]}${numberExample[7]}-${numberExample[8]}${numberExample[9]}`;
-  let lastIndexOfSymbol = PHONE_ELEMENT.value.split('').indexOf('_');
-  PHONE_ELEMENT.setSelectionRange(lastIndexOfSymbol, lastIndexOfSymbol)
+  setRange(findClosestEmptySlot());
 }
 
 const onFocus = () => {
+  if (numberExample.filter((item) => +item).length !== 0) {
+    return;
+  }
   PHONE_ELEMENT.value = DEFAULT_MASK;
   setTimeout(() => PHONE_ELEMENT.setSelectionRange(MIN_RANGE, MIN_RANGE), 0);
 }
 
 const onBlur = () => {
-  PHONE_ELEMENT.value = '';
+  if (numberExample.filter((item) => +item).length === 0) {
+    PHONE_ELEMENT.value = '';
+  }
 }
 
 PHONE_ELEMENT.addEventListener('keydown', onInput);
