@@ -1,0 +1,46 @@
+.facts
+  margin-bottom: 279px
+
+.facts ul
+  display: flex
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+.facts h2
+  margin: 0px
+  margin-bottom: 102px
+  padding-left: 402px
+  @include fstyle(30px, 30px, $very-dark-black, 600)
+  letter-spacing: -0.15px
+
+.facts li
+  position: relative
+  margin-right: 38px
+  &:last-child
+    margin-right: 0px
+  &:before
+    content: "01"
+    position: absolute
+    top: -56px
+    left: 50%
+    margin-left: -13px
+    @include fstyle(28px, 38px, $light-blue, 700)
+    text-align: center
+    letter-spacing: -1.27px
+  &:nth-child(2)
+    &:before
+      content: "02"
+  &:nth-child(3)
+    &:before
+      content: "03"
+  &:last-child
+    &:before
+      content: "04"
+
+
+.facts p
+  margin: 0px
+  @include fstyle(22px, 34px, $black)
+  letter-spacing: -0.1px
+  text-align: center
