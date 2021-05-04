@@ -1,0 +1,68 @@
+.bicycle-types
+  min-height: 1038px
+  background-color: $darker-grey
+  overflow: hidden
+
+.bicycle-types h2
+  margin: 0px
+  margin-top: 149px
+  margin-bottom: 51px
+  margin-left: 450px
+  @include fstyle(30px, 30px, $very-dark-black, 600)
+  letter-spacing: -0.15px
+
+.bicycle-types ul
+  display: flex
+  margin: 0px
+  margin-left: 31px
+  padding: 0px
+  list-style: none
+
+.bicycle-types li
+  position: relative
+  margin-right: 50px
+  z-index: 0
+  &:last-child
+    margin-right: 0px
+    &:before
+      content: ""
+      position: absolute
+      top: -32px
+      right: -36px
+      height: 95px
+      width: 95px
+      background-image: url("data:image/svg+xml,%3Csvg width='95' height='95' viewBox='0 0 95 95' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='47.5' cy='47.5' r='39' stroke='%230AD9C6' stroke-width='17'/%3E%3C/svg%3E%0A");
+  &:first-child
+    margin-top: 10px
+    &:before
+      content: ""
+      position: absolute
+      top: 156px
+      left: -59px
+      height: 180px
+      width: 180px
+      background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='90' cy='90' r='76.5' stroke='%230AD9C6' stroke-width='27'/%3E%3C/svg%3E%0A");
+      z-index: -1
+  &:nth-child(2)
+    margin-top: 39px
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      height: 47px
+      width: 47px
+      background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='4' y='4' width='39' height='39' stroke='%230AD9C6' stroke-width='8'/%3E%3C/svg%3E%0A");
+    &:before
+      top: -18px
+      left: -19px
+    &:after
+      right: -23px
+      bottom: 33px
+
+
+.bicycle-types p
+  margin: 0px
+  margin-top: 17px
+  @include fstyle(22px, 34px, $black, 600)
+  letter-spacing: -0.1px
+  text-align: center
