@@ -2,6 +2,8 @@
   margin-bottom: 130px
   @media (max-width: $tablet-width-only)
     margin-bottom: 70px
+  @media (max-width: $mobile-width-only)
+    margin-bottom: 70px
 
 .facts ul
   display: flex
@@ -14,6 +16,14 @@
     grid-template-rows: 68px
     gap: 93px 4vw
     margin-left: 9.2vw
+  @media (max-width: $mobile-width-only)
+    display: flex
+    gap: 0px
+    grid-template-rows: none
+    grid-template-columns: none
+    flex-direction: column
+    height: 550px
+    margin-left: 4.3vw
 
 .facts h2
   margin: 0px
@@ -25,10 +35,13 @@
     width: 37.7vw
     margin-left: 26.5vw
     margin-bottom: 86px
-    padding-left: 0px
     @include fstyle(24px, 41px, $very-dark-black, 600)
     text-align: center
     letter-spacing: -0.1px
+  @media (max-width: $mobile-width-only)
+    width: 90.6vw
+    margin-left: 0
+    margin-bottom: 85px
 
 .facts li
   position: relative
@@ -55,6 +68,12 @@
       content: "04"
   @media (max-width: $tablet-width-only)
     margin-right: 0px
+  @media (max-width: $mobile-width-only)
+    width: 82vw
+    min-height: 80px
+    margin-bottom: 80.7px
+    &:first-child
+      min-height: 70px
 
 
 .facts p
@@ -62,3 +81,6 @@
   @include fstyle(22px, 34px, $black)
   letter-spacing: -0.1px
   text-align: center
+  @media (max-width: $mobile-width-only)
+    @include fstyle(18px, 34px, $black)
+    letter-spacing: -0.5px

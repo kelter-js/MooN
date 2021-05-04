@@ -4,6 +4,8 @@
   overflow: hidden
   @media (max-width: $tablet-width-only)
     min-height: 949px
+  @media (max-width: $mobile-width-only)
+    min-height: 1319px
 
 .bicycle-types h2
   margin: 0px
@@ -14,11 +16,14 @@
   letter-spacing: -0.15px
   @media (max-width: $tablet-width-only)
     width: 37.5vw
+    margin: 0px auto
     margin-top: 50px
-    margin-left: 26.6vw
     margin-bottom: 30px
     @include fstyle(24px, 41px, $very-dark-black, 600)
     letter-spacing: -0.12px
+    text-align: center
+  @media (max-width: $mobile-width-only)
+    width: 230px
 
 .bicycle-types ul
   display: flex
@@ -30,6 +35,12 @@
     flex-wrap: wrap
     justify-content: center
     margin-left: 7vw
+  @media (max-width: $mobile-width-only)
+    width: 288px
+    margin: 0px auto
+    margin-bottom: 50px
+    justify-content: normal
+    flex-direction: column
 
 .bicycle-types li
   position: relative
@@ -72,6 +83,11 @@
       right: -23px
       bottom: 33px
   @media (max-width: $tablet-width-only)
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 270px
+    margin-right: 6.5vw
     &:first-child,
     &:nth-child(2)
       margin-top: 0px
@@ -94,7 +110,26 @@
       &:before,
       &:after
         display: none
+  @media (max-width: $mobile-width-only)
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 40px
+    margin-left: 15px
+    margin-right: 0px
+    &:last-child
+      margin-bottom: 0px
+      margin-top: 0px
+    &:first-child
+      &:before
+        left: -24px
+    &:last-child
+      &:before
+        right: -15px
 
+.bicycle-types img
+  @media (max-width: $mobile-width-only)
+    border-radius: 10px
 
 .bicycle-types p
   margin: 0px
@@ -102,3 +137,5 @@
   @include fstyle(22px, 34px, $black, 600)
   letter-spacing: -0.1px
   text-align: center
+  @media (max-width: $mobile-width-only)
+    margin-top: 17px
