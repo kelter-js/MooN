@@ -3,15 +3,23 @@
   min-height: 706px
   margin-bottom: 248px
   background-color: $dark-black
+  @media (max-width: $tablet-width-only)
+    min-height: 413px
 
 .promo-video img
   position: absolute
   top: 282px
   left: 256px
+  @media (max-width: $tablet-width-only)
+    top: 194px
+    left: 50%
+    margin-left: -32.7vw
+    width: 65.4vw
+
 
 .promo-video button
   position: absolute
-  top: 511px
+  top: 545px
   left: 688px
   height: 65px
   width: 65px
@@ -39,8 +47,25 @@
     border-right: none
     border-left: 13px solid $another-type-of-black
 
+  @media (max-width: $tablet-width-only)
+    top: 323px
+    left: 44.1vw
+    height: 90.3px
+    width: 90.3px
+    &:before
+      width: 90.3px
+      height: 90.3px
+    &:after
+      top: 32.5px
+      left: 39.7px
+      border: 12px solid transparent
+      border-right: none
+      border-left: 18px solid $another-type-of-black
+
 .promo-video div
   padding-top: 120px
+  @media (max-width: $tablet-width-only)
+    padding-top: 70px
 
 .promo-video h2
   margin: 0px
@@ -48,6 +73,11 @@
   margin-left: 408px
   @include fstyle(30px, 30px, $white, 600)
   letter-spacing: -0.15px
+  @media (max-width: $tablet-width-only)
+    width: 36.4vw
+    margin-left: 27.2vw
+    @include fstyle(24px, 30px, $white, 600)
+    letter-spacing: -0.12px
 
 .promo-video p
   width: 340px
@@ -57,3 +87,8 @@
   @include fstyle(16px, 28px, rgba($white, 0.7), 300)
   text-align: center
   letter-spacing: -0.8px
+  @media (max-width: $tablet-width-only)
+    width: 55.8vw
+    margin-bottom: 18px
+    margin-left: 17.5vw
+
