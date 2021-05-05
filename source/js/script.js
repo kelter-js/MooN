@@ -197,3 +197,12 @@ PHONE_ELEMENT.addEventListener('focus', onFocus);
 PHONE_ELEMENT.addEventListener('blur', onBlur);
 PHONE_ELEMENT.addEventListener('paste', onPaste);
 
+
+//
+const MAP_IMAGE_ELEMENT = document.querySelector('.page-footer__map-wrapper');
+const MAP_INTERACTIVE_ELEMENT = document.querySelector('.page-footer__map-interactive');
+const INVISIBLE_MAP_IMAGE_CLASS = 'page-footer__map-wrapper--invisible';
+const INVISIBLE_MAP_INTERACTIVE_CLASS = 'page-footer__map-interactive--invisible';
+
+MAP_IMAGE_ELEMENT.classList.add(INVISIBLE_MAP_IMAGE_CLASS);
+MAP_INTERACTIVE_ELEMENT.classList.remove(INVISIBLE_MAP_INTERACTIVE_CLASS);

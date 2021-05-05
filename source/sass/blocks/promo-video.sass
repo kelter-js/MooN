@@ -5,6 +5,10 @@
   background-color: $dark-black
   @media (max-width: $tablet-width-only)
     min-height: 413px
+    margin-bottom: 155px
+  @media (max-width: $mobile-width-only)
+    min-height: 384px
+    margin-bottom: 119px
 
 .promo-video img
   position: absolute
@@ -13,9 +17,13 @@
   @media (max-width: $tablet-width-only)
     top: 194px
     left: 50%
-    margin-left: -32.7vw
-    width: 65.4vw
-
+    width: 503px
+    margin-left: -251.5px
+  @media (max-width: $mobile-width-only)
+    top: 271px
+    left: 50%
+    width: 288px
+    margin-left: -144px
 
 .promo-video button
   position: absolute
@@ -48,10 +56,11 @@
     border-left: 13px solid $another-type-of-black
 
   @media (max-width: $tablet-width-only)
-    top: 323px
-    left: 44.1vw
+    top: 81.1%
+    left: 50%
     height: 90.3px
     width: 90.3px
+    margin-left: -45.2px
     &:before
       width: 90.3px
       height: 90.3px
@@ -61,34 +70,52 @@
       border: 12px solid transparent
       border-right: none
       border-left: 18px solid $another-type-of-black
+  @media (max-width: $mobile-width-only)
+    top: 88.6%
+    left: 50.1%
+    height: 65px
+    width: 65px
+    &:before
+      height: 65px
+      width: 65px
+    &:after
+      top: 23.5px
+      left: 28.6px
+      border: 9px solid transparent
+      border-right: none
+      border-left: 13px solid $another-type-of-black
 
 .promo-video div
   padding-top: 120px
   @media (max-width: $tablet-width-only)
     padding-top: 70px
+  @media (max-width: $mobile-width-only)
+    padding-top: 84px
 
 .promo-video h2
-  margin: 0px
+  width: 350px
+  margin: 0px auto
   margin-bottom: 20px
-  margin-left: 408px
   @include fstyle(30px, 30px, $white, 600)
   letter-spacing: -0.15px
   @media (max-width: $tablet-width-only)
-    width: 36.4vw
-    margin-left: 27.2vw
+    width: 280px
     @include fstyle(24px, 30px, $white, 600)
     letter-spacing: -0.12px
 
 .promo-video p
   width: 340px
-  margin: 0px
+  margin: 0px auto
   margin-bottom: 56px
-  margin-left: 413px
   @include fstyle(16px, 28px, rgba($white, 0.7), 300)
   text-align: center
   letter-spacing: -0.8px
   @media (max-width: $tablet-width-only)
     width: 55.8vw
+    margin: 0px auto
     margin-bottom: 18px
-    margin-left: 17.5vw
+  @media (max-width: $mobile-width-only)
+    width: 90vw
+    margin: 0px auto
+    margin-bottom: 50px
 
