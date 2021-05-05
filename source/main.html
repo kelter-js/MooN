@@ -100,6 +100,21 @@
           </ul>
         </div>
       </section>
+      <section class="promo-video">
+        <div class="container">
+          <h2>Видео про велосипеды</h2>
+          <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+          <picture>
+            <source type="image/webp" media="(max-width: 320px)" srcset="img/video-thumbnail-mobile.webp 1x, img/video-thumbnail-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/video-thumbnail-tablet.webp 1x, img/video-thumbnail-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-thumbnail-desktop.webp 1x, img/video-thumbnail-desktop@2x.webp 2x">
+            <source media="(max-width: 320px)" srcset="img/video-thumbnail-mobile.png 1x, img/video-thumbnail-mobile@2x.png 2x">
+            <source media="(max-width: 768px)" srcset="img/video-thumbnail-tablet.png 1x, img/video-thumbnail-tablet@2x.png 2x">
+            <img src="img/video-thumbnail-desktop.png" srcset="img/video-thumbnail-desktop@2x.png 2x" alt="Превью видеоролика о велосипедах">
+          </picture>
+          <button type="button" aria-label="Воспроизвести видео"></button>
+        </div>
+      </section>
     </main>
     <footer class="page-footer container">
       <section class="page-footer__location">
@@ -112,11 +127,11 @@
 
         <div class="page-footer__map-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 320px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-            <source media="(min-width: 320px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <source media="(max-width: 320px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
+            <source media="(max-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
             <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Наш адрес в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19">
           </picture>
         </div>

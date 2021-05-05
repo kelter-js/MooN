@@ -1,0 +1,59 @@
+.promo-video
+  position: relative
+  min-height: 706px
+  margin-bottom: 248px
+  background-color: $dark-black
+
+.promo-video img
+  position: absolute
+  top: 282px
+  left: 256px
+
+.promo-video button
+  position: absolute
+  top: 511px
+  left: 688px
+  height: 65px
+  width: 65px
+  margin-top: -32.5px
+  border: none
+  background-color: transparent
+  cursor: pointer
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+
+  &:before
+    top: 0px
+    left: 0px
+    width: 65px
+    height: 65px
+    background-color: $light-blue
+    border-radius: 50%
+
+  &:after
+    top: 23.5px
+    left: 28.6px
+    border: 9px solid transparent
+    border-right: none
+    border-left: 13px solid $another-type-of-black
+
+.promo-video div
+  padding-top: 120px
+
+.promo-video h2
+  margin: 0px
+  margin-bottom: 20px
+  margin-left: 408px
+  @include fstyle(30px, 30px, $white, 600)
+  letter-spacing: -0.15px
+
+.promo-video p
+  width: 340px
+  margin: 0px
+  margin-bottom: 56px
+  margin-left: 413px
+  @include fstyle(16px, 28px, rgba($white, 0.7), 300)
+  text-align: center
+  letter-spacing: -0.8px
