@@ -7,6 +7,7 @@
 
 .facts ul
   display: flex
+  flex-wrap: wrap
   margin: 0px
   padding: 0px
   list-style: none
@@ -18,11 +19,12 @@
     margin-left: 9.2vw
   @media (max-width: $mobile-width-only)
     display: flex
+    flex-wrap: wrap
     gap: 0px
     grid-template-rows: none
     grid-template-columns: none
     flex-direction: column
-    height: 550px
+    min-height: 553px
     margin-left: 4.3vw
 
 .facts h2
@@ -44,6 +46,7 @@
     margin-bottom: 85px
 
 .facts li
+  width: 263px
   position: relative
   margin-right: 38px
   &:last-child
@@ -74,6 +77,8 @@
     margin-bottom: 80.7px
     &:first-child
       min-height: 70px
+    &:last-child
+      margin-bottom: 0px
 
 
 .facts .facts__item-text

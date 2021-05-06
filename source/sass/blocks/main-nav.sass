@@ -1,6 +1,8 @@
 .main-nav
   position: relative
   display: flex
+  flex-wrap: wrap
+  height: 32px
   margin-left: 146px
   @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
     position: static
@@ -73,7 +75,7 @@
   .main-nav--nojs .main-nav__navigation
     display: block
 
-.main-nav__link
+.main-nav__navigation a
   margin-right: 135px
   text-decoration: none
   @include fstyle(16px, 32px, rgba($white, 0.7), 300)

@@ -14,20 +14,25 @@
     <link rel="preload" href="fonts/open-sans-400.woff" as="font">
     <link rel="preload" href="fonts/open-sans-600.woff" as="font">
     <link rel="preload" href="fonts/open-sans-700.woff" as="font">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/fav-icon.png" sizes="16x16" type="image/png">
     <link rel="manifest" href="/manifest.json">
   </head>
-  <body class="page__body">
+  <body>
     <header class="page-header">
+      <h1 class="visually-hidden">MooN - онлайн магазин, специализированный на продаже профессиональных велосипедов</h1>
       <div class="page-header__wrapper container">
-        <a class="page-header__logo"><span class="visually-hidden">Логотип MooN</span></a>
+        <a class="page-header__logo">
+          <svg width="68" height="20" fill="none" role="img" aria-label="Логотип MooN">
+            <use xlink:href="img/icons/logo.svg#main-logo"/>
+          </svg>
+        </a>
         <div class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <nav class="main-nav__navigation">
             <a class="main-nav__link" href="#about-us">О нас</a>
-            <a class="main-nav__link" href="#bicycles">Виды велосипедов</a>
-            <a class="main-nav__link" href="#video-bicycles">Видео про велосипеды</a>
+            <a class="main-nav__link" href="#bicycle-types">Виды велосипедов</a>
+            <a class="main-nav__link" href="#bicycles-video">Видео про велосипеды</a>
             <a class="main-nav__link" href="#contacts">Контакты</a>
           </nav>
         </div>
@@ -49,8 +54,7 @@
       </div>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">MooN - онлайн магазин, специализированный на продаже профессиональных велосипедов</h1>
-      <section class="facts container">
+      <section id="about-us" class="facts container">
         <h2>Несколько фактов о нас</h2>
         <ul>
           <li>
@@ -67,7 +71,7 @@
           </li>
         </ul>
       </section>
-      <section class="bicycle-types">
+      <section id="bicycle-types" class="bicycle-types">
         <div class="container">
           <h2>Виды велосипедов</h2>
           <ul>
@@ -101,7 +105,7 @@
           </ul>
         </div>
       </section>
-      <section class="promo-video">
+      <section id="bicycles-video" class="promo-video">
         <div class="container">
           <h2>Видео про велосипеды</h2>
           <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для&nbsp;себя.</p>
@@ -117,7 +121,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer container">
+    <footer id="contacts" class="page-footer container">
       <section class="page-footer__location">
         <h2>Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
@@ -138,6 +142,7 @@
         </div>
       </section>
       <section class="page-footer__contacts">
+        <h2 class="visually-hidden">Контакты для связи с нами</h2>
         <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         <a href="tel:+749978468446">+7 (499) -784-684-46</a>
       </section>

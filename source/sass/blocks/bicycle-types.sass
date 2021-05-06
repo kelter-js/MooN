@@ -27,12 +27,12 @@
 
 .bicycle-types ul
   display: flex
+  flex-wrap: wrap
   margin: 0px
   margin-left: 31px
   padding: 0px
   list-style: none
   @media (max-width: $tablet-width-only)
-    flex-wrap: wrap
     justify-content: center
     margin-left: 7vw
   @media (max-width: $mobile-width-only)
@@ -67,7 +67,7 @@
       width: 180px
       background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='90' cy='90' r='76.5' stroke='%230AD9C6' stroke-width='27'/%3E%3C/svg%3E%0A");
       z-index: -1
-  &:nth-child(2)
+  &:nth-child(2n)
     margin-top: 39px
     &:before,
     &:after
@@ -89,7 +89,7 @@
     width: 270px
     margin-right: 6.5vw
     &:first-child,
-    &:nth-child(2)
+    &:nth-child(2n)
       margin-top: 0px
     &:last-child
       margin-top: 50px
@@ -106,7 +106,7 @@
         width: 127px
         height: 127px
         background-image: url("data:image/svg+xml,%3Csvg width='127' height='127' viewBox='0 0 127 127' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='63.5' cy='63.5' r='54.5' stroke='%230AD9C6' stroke-width='18'/%3E%3C/svg%3E%0A");
-    &:nth-child(2)
+    &:nth-child(2n)
       &:before,
       &:after
         display: none
