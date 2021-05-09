@@ -1,3 +1,5 @@
+/* eslint-env es6 */
+'use strict';
 const NAVIGATION_ELEMENT = document.querySelector('.main-nav');
 const TOGGLE_NAVIGATION_BUTTON = document.querySelector('.main-nav__toggle');
 const PHONE_ELEMENT = document.querySelector('#tel');
@@ -16,7 +18,7 @@ if (NAVIGATION_ELEMENT) {
       NAVIGATION_ELEMENT.classList.add('main-nav--closed');
       NAVIGATION_ELEMENT.classList.remove('main-nav--opened');
     }
-  }
+  };
   TOGGLE_NAVIGATION_BUTTON.addEventListener('click', onClickToggleNavigation);
 }
 
@@ -32,7 +34,7 @@ if (PHONE_ELEMENT) {
     '_',
     '_',
     '_',
-  ]
+  ];
 
   const MIN_RANGE = 4;
   const MAX_RANGE = 17;
@@ -62,63 +64,63 @@ if (PHONE_ELEMENT) {
 
   const findClosestEmptySlot = () => {
     return PHONE_ELEMENT.value.split('').indexOf('_');
-  }
+  };
 
   const setPositionNonInt = (position, neededToMove) => {
-      if (neededToMove) {
-        if (position <= MIN_RANGE) {
-          setRange();
-          return;
-        }
-        setRange(--position);
-      }
-      if (position < MIN_RANGE) {
+    if (neededToMove) {
+      if (position <= MIN_RANGE) {
         setRange();
         return;
       }
-      setRange(position);
-  }
+      setRange(--position);
+    }
+    if (position < MIN_RANGE) {
+      setRange();
+      return;
+    }
+    setRange(position);
+  };
 
   const SKIPPING_RANGE = {
-    "0" : 4,
-    "1" : 4,
-    "2" : 4,
-    "3" : 4,
-    "7" : 9,
-    "8" : 9,
-    "12" : 13,
-    "15" : 16,
+    '0': 4,
+    '1': 4,
+    '2': 4,
+    '3': 4,
+    '7': 9,
+    '8': 9,
+    '12': 13,
+    '15': 16,
   };
 
   const fillRest = (neededToFill) => {
     let currentLength = neededToFill.length;
     neededToFill.length = MASK_LENGTH;
     neededToFill.fill(DEFAULT_VALUE, currentLength);
-  }
+  };
 
   const setRange = (start = MIN_RANGE, element = PHONE_ELEMENT) => {
-    element.setSelectionRange(start, start)
-  }
+    element.setSelectionRange(start, start);
+  };
 
   const correctExample = (currentPosition) => {
     let mutatedExample = numberExample.slice(ALLOWED_RANGE.indexOf(currentPosition)).filter((item) => +item);
     numberExample.splice(ALLOWED_RANGE.indexOf(currentPosition));
-    numberExample.push(...mutatedExample)
-    fillRest(numberExample)
-  }
+    numberExample.push(...mutatedExample);
+    fillRest(numberExample);
+  };
 
   const pressedInteger = (range, position, pressedButton) => {
     numberExample.splice(range.indexOf(position), 0, pressedButton);
-  }
+  };
 
   const setDefault = (range, position) => {
     numberExample[range.indexOf(position)] = DEFAULT_VALUE;
-  }
+  };
 
   const filterField = (range, pressedButton, currentPosition) => {
     let mutatedRange = range;
     if (pressedButton === ALLOWED_PRESSED_KEYS[0]) {
-      mutatedRange = mutatedRange.map((range) => ++range);
+      mutatedRange = mutatedRange.map((value) => ++value);
     }
     if (mutatedRange.includes(currentPosition)) {
       if (+pressedButton) {
@@ -136,17 +138,19 @@ if (PHONE_ELEMENT) {
   };
 
   const FUNCTIONAL_BUTTONS = {
-    'Home' : () => PHONE_ELEMENT.setSelectionRange(MIN_RANGE, MIN_RANGE),
-    'End' : () => PHONE_ELEMENT.setSelectionRange(MAX_RANGE, MAX_RANGE),
-    'ArrowRight' : (position) => setRange(++position),
-    'ArrowLeft' : (position) => setPositionNonInt(position, true),
-    'Delete' : (position) => setPositionNonInt(position),
-    'Backspace' : (position) => setPositionNonInt(position, true),
-  }
+    'Home': () => PHONE_ELEMENT.setSelectionRange(MIN_RANGE, MIN_RANGE),
+    'End': () => PHONE_ELEMENT.setSelectionRange(MAX_RANGE, MAX_RANGE),
+    'ArrowRight': (position) => setRange(++position),
+    'ArrowLeft': (position) => setPositionNonInt(position, true),
+    'Delete': (position) => setPositionNonInt(position),
+    'Backspace': (position) => setPositionNonInt(position, true),
+  };
 
   const onInput = (evt) => {
     let pressedButton = evt.key;
-    if (pressedButton === ALLOWED_PRESSED_KEYS[2] || pressedButton == ALLOWED_PRESSED_KEYS[3]) return;
+    if (pressedButton === ALLOWED_PRESSED_KEYS[2] || pressedButton === ALLOWED_PRESSED_KEYS[3]) {
+      return;
+    }
 
     evt.preventDefault();
     let currentCaretPosition = PHONE_ELEMENT.selectionStart;
