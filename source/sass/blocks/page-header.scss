@@ -1,0 +1,183 @@
+.page-header__logo {
+  position: absolute;
+  top: 319px;
+  left: 280px;
+  width: 67.6px;
+  height: 20.2px;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-width-only) {
+    top: 25px;
+    left: 16px;
+  }
+}
+
+.page-header {
+  margin-bottom: 151px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 70px;
+  }
+}
+
+.page-header__info {
+  width: 393px;
+  min-height: 267px;
+  margin-left: 143px;
+  margin-right: 160px;
+  margin-top: 150px;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 126px;
+    width: 68vw;
+    margin-top: 134px;
+    margin-left: 11vw;
+    margin-right: 0;
+    margin-bottom: 150px;
+    overflow: visible;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 200px;
+    width: 90vw;
+    margin: 0;
+    margin-bottom: 140px;
+    margin-top: 120px;
+  }
+}
+
+.page-header h2 {
+  margin: 0;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+
+  @include fstyle(46px, 64px, $white, 700);
+
+  @media (max-width: $tablet-width-only) {
+    width: 68vw;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: -0.15px;
+    text-align: center;
+
+    @include fstyle(30px, 42px, $white, 700);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 90vw;
+  }
+}
+
+.page-header p {
+  margin: 0;
+
+  @include fstyle(20px, 32px, rgba($white, 0.8), 300);
+
+  @media (max-width: $tablet-width-only) {
+    width: 56.6vw;
+    margin-left: 6vw;
+    text-align: center;
+    letter-spacing: -0.1px;
+
+    @include fstyle(18px, 32px, rgba($white, 0.8), 300);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    height: 96px;
+    width: 90vw;
+    margin-left: 0;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 825px;
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 683px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 750px;
+  }
+}
+
+.page-header__form {
+  width: 327px;
+  min-height: 263px;
+  margin-top: 150px;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width-only) {
+    width: 42vw;
+    margin-left: 25vw;
+    margin-top: 0;
+    overflow: visible;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 90vw;
+    margin: 0;
+  }
+}
+
+.page-header__form p {
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -0.1px;
+
+  @include fstyle(17px, 28px, $white, 600);
+
+  @media (max-width: $tablet-width-only) {
+    width: 42vw;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include fstyle(18px, 28px, $black, 600);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 90vw;
+    margin-bottom: 20px;
+  }
+}
+
+.page-header__form form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page-header__form input {
+  padding-left: 30px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid $light-grey;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    @include fstyle(15px, 24px, $darkest-black);
+  }
+}
+
+.page-header__form input[type="submit"] {
+  padding-left: 48px;
+  padding-right: 47px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  background: $light-blue;
+  border: none;
+
+  @include fstyle(15px, 21px, $black, 600);
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 15px;
+  }
+}

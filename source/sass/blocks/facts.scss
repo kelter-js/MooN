@@ -1,0 +1,133 @@
+.facts {
+  margin-bottom: 130px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 70px;
+  }
+}
+
+.facts ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width-only) {
+    display: grid;
+    grid-template-columns: 34.2vw 34.2vw;
+    grid-template-rows: 68px;
+    gap: 93px 4vw;
+    margin-left: 9.2vw;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    grid-template-rows: none;
+    grid-template-columns: none;
+    flex-direction: column;
+    min-height: 553px;
+    margin-left: 4.3vw;
+  }
+}
+
+.facts h2 {
+  margin: 0;
+  margin-bottom: 102px;
+  margin-left: 402px;
+  letter-spacing: -0.15px;
+
+  @include fstyle(30px, 30px, $very-dark-black, 600);
+
+  @media (max-width: $tablet-width-only) {
+    width: 37.7vw;
+    margin-left: 26.5vw;
+    margin-bottom: 86px;
+    text-align: center;
+    letter-spacing: -0.1px;
+
+    @include fstyle(24px, 41px, $very-dark-black, 600);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 90.6vw;
+    margin-left: 0;
+    margin-bottom: 85px;
+  }
+}
+
+.facts li {
+  width: 263px;
+  position: relative;
+  margin-right: 38px;
+
+  &:last-child {
+    margin-right: 0;
+
+    &::before {
+      content: "04";
+    }
+  }
+
+  &::before {
+    content: "01";
+    position: absolute;
+    top: -56px;
+    left: 50%;
+    margin-left: -13px;
+    text-align: center;
+    letter-spacing: -1.27px;
+
+    @include fstyle(28px, 38px, $light-blue, 700);
+  }
+
+  &:nth-child(2n) {
+    &::before {
+      content: "02";
+    }
+  }
+
+  &:nth-child(3n) {
+    &::before {
+      content: "03";
+    }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 82vw;
+    min-height: 80px;
+    margin-bottom: 80.7px;
+
+    &:first-child {
+      min-height: 70px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.facts__item-text {
+  margin: 0;
+  letter-spacing: -0.1px;
+  text-align: center;
+
+  @include fstyle(22px, 34px, $black);
+
+  @media (max-width: $mobile-width-only) {
+    letter-spacing: -0.5px;
+
+    @include fstyle(18px, 34px, $black);
+  }
+}
