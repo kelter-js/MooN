@@ -67,14 +67,6 @@
   position: relative;
   margin-right: 38px;
 
-  &:last-child {
-    margin-right: 0;
-
-    &::before {
-      content: "04";
-    }
-  }
-
   &::before {
     content: "01";
     position: absolute;
@@ -96,6 +88,14 @@
   &:nth-child(3n) {
     &::before {
       content: "03";
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::before {
+      content: "04";
     }
   }
 

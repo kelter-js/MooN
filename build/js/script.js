@@ -155,8 +155,10 @@ if (PHONE_ELEMENT) {
     evt.preventDefault();
     let currentCaretPosition = PHONE_ELEMENT.selectionStart;
 
-    if(+pressedButton || pressedButton === ALLOWED_PRESSED_KEYS[1]) {
-      if (SKIPPING_RANGE[currentCaretPosition]) currentCaretPosition = SKIPPING_RANGE[currentCaretPosition];
+    if (+pressedButton || pressedButton === ALLOWED_PRESSED_KEYS[1]) {
+      if (SKIPPING_RANGE[currentCaretPosition]) {
+        currentCaretPosition = SKIPPING_RANGE[currentCaretPosition];
+      }
     }
 
     if (pressedButton !== ALLOWED_PRESSED_KEYS[0] || pressedButton !== ALLOWED_PRESSED_KEYS[1] || +pressedButton) {
@@ -170,19 +172,21 @@ if (PHONE_ELEMENT) {
       return;
     }
 
-    if(+pressedButton) {
+    if (+pressedButton) {
       PHONE_ELEMENT.setSelectionRange(++currentCaretPosition, currentCaretPosition);
     }
   };
 
   const onPaste = (evt) => {
     evt.preventDefault();
-    let pasteNumber = evt.clipboardData.getData('text/plain').split('').filter((item) => +item)
-    numberExample = pasteNumber.map((integer, index) => numberExample[index] = integer);
+    let pasteNumber = evt.clipboardData.getData('text/plain').split('').filter((item) => +item);
+    numberExample = pasteNumber.map((integer, index) => {
+      numberExample[index] = integer;
+    });
     fillRest(numberExample);
     PHONE_ELEMENT.value = `+7 (${numberExample[0]}${numberExample[1]}${numberExample[2]}) ${numberExample[3]}${numberExample[4]}${numberExample[5]}-${numberExample[6]}${numberExample[7]}-${numberExample[8]}${numberExample[9]}`;
     setRange(findClosestEmptySlot());
-  }
+  };
 
   const onFocus = () => {
     if (numberExample.filter((item) => +item).length !== 0) {
@@ -190,13 +194,13 @@ if (PHONE_ELEMENT) {
     }
     PHONE_ELEMENT.value = DEFAULT_MASK;
     setTimeout(() => PHONE_ELEMENT.setSelectionRange(MIN_RANGE, MIN_RANGE), 0);
-  }
+  };
 
   const onBlur = () => {
     if (numberExample.filter((item) => +item).length === 0) {
       PHONE_ELEMENT.value = '';
     }
-  }
+  };
 
   PHONE_ELEMENT.addEventListener('keydown', onInput);
   PHONE_ELEMENT.addEventListener('focus', onFocus);
