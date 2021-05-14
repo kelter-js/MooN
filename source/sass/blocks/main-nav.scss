@@ -92,15 +92,17 @@
 }
 
 .main-nav__navigation a {
-  margin-right: 135px;
+  margin-right: 128px;
   text-decoration: none;
-  letter-spacing: -0.8px;
 
   @include fstyle(16px, 32px, rgba($white, 0.7), 300);
 
+  &:nth-child(2n) {
+    margin-right: 132px;
+  }
+
   &:last-child {
     margin-right: 0;
-    margin-left: 30px;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -115,6 +117,10 @@
     margin-right: 15.5%;
 
     @include fstyle(20px, 28px, $darker-black-color);
+
+    &:nth-child(2n) {
+      margin-right: 15.5%;
+    }
 
     &:last-child {
       margin-left: 0;
@@ -145,12 +151,13 @@
   position: relative;
   width: 873.5px;
   padding-top: 21px;
+  padding-left: 20px;
 
   &::before {
     content: "";
     position: absolute;
     top: 62px;
-    left: -15px;
+    left: 0;
     height: 1px;
     width: 100%;
     background-color: rgba($white, 0.2);
@@ -163,6 +170,7 @@
     min-height: 568px;
     width: 100vw;
     padding-top: 100px;
+    padding-left: 0;
     background-color: $white;
 
     &::before {

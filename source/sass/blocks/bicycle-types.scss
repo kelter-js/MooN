@@ -1,5 +1,6 @@
 .bicycle-types {
   min-height: 1038px;
+  margin-bottom: 19px;
   background-color: $darker-grey;
   overflow: hidden;
 
@@ -13,10 +14,10 @@
 }
 
 .bicycle-types h2 {
-  margin: 0;
-  margin-top: 149px;
+  width: 288px;
+  margin: 0 auto;
+  margin-top: 170px;
   margin-bottom: 51px;
-  margin-left: 450px;
   letter-spacing: -0.15px;
 
   @include fstyle(30px, 30px, $very-dark-black, 600);
@@ -41,7 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-left: 31px;
+  margin-left: 20px;
   padding: 0;
   list-style: none;
 
@@ -66,6 +67,7 @@
 
   &:last-child {
     margin-right: 0;
+    margin-top: -2px;
 
     &::before {
       content: "";
@@ -79,13 +81,13 @@
   }
 
   &:first-child {
-    margin-top: 10px;
+    margin-top: 8px;
 
     &::before {
       content: "";
       position: absolute;
       top: 156px;
-      left: -59px;
+      left: -60px;
       height: 180px;
       width: 180px;
       background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='90' cy='90' r='76.5' stroke='%230AD9C6' stroke-width='27'/%3E%3C/svg%3E%0A");
@@ -94,7 +96,7 @@
   }
 
   &:nth-child(2n) {
-    margin-top: 39px;
+    margin-top: 36px;
 
     &::before,
     &::after {
@@ -112,7 +114,7 @@
 
     &::after {
       right: -23px;
-      bottom: 33px;
+      bottom: 30px;
     }
   }
 
@@ -194,8 +196,8 @@
 
 .bicycle-types p {
   margin: 0;
-  margin-top: 17px;
-  letter-spacing: -0.1px;
+  margin-top: 16px;
+  letter-spacing: -0.5px;
   text-align: center;
 
   @include fstyle(22px, 34px, $black, 600);

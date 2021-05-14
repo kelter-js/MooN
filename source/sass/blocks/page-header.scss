@@ -70,6 +70,7 @@
 
 .page-header p {
   margin: 0;
+  letter-spacing: -0.1px;
 
   @include fstyle(20px, 32px, rgba($white, 0.8), 300);
 
@@ -106,7 +107,7 @@
 .page-header__form {
   width: 327px;
   min-height: 263px;
-  margin-top: 150px;
+  margin-top: 103px;
   overflow: hidden;
 
   @media (max-width: $tablet-width-only) {
@@ -151,12 +152,17 @@
 }
 
 .page-header__form input {
-  padding-left: 30px;
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-left: 29px;
+  padding-top: 19px;
+  padding-bottom: 12px;
   margin-bottom: 20px;
   border-radius: 6px;
   border: 1px solid $light-grey;
+  letter-spacing: 0.1px;
+
+  &:focus-visible {
+    outline-offset: 1px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -167,9 +173,14 @@
   }
 }
 
+.page-header__form input[type="tel"] {
+  letter-spacing: 0.3px;
+  padding-top: 18px;
+}
+
 .page-header__form input[type="submit"] {
-  padding-left: 48px;
-  padding-right: 47px;
+  padding-left: 46px;
+  padding-right: 48px;
   padding-top: 16px;
   padding-bottom: 14px;
   background: $light-blue;

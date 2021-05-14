@@ -39,7 +39,7 @@
 
 .facts h2 {
   margin: 0;
-  margin-bottom: 102px;
+  margin-bottom: 101px;
   margin-left: 402px;
   letter-spacing: -0.15px;
 
@@ -70,13 +70,17 @@
   &::before {
     content: "01";
     position: absolute;
-    top: -56px;
-    left: 50%;
+    top: -52px;
+    left: 49.5%;
     margin-left: -13px;
     text-align: center;
     letter-spacing: -1.27px;
 
     @include fstyle(28px, 38px, $light-blue, 700);
+  }
+
+  &:first-child {
+    padding-top: 4px;
   }
 
   &:nth-child(2n) {
@@ -101,6 +105,10 @@
 
   @media (max-width: $tablet-width-only) {
     margin-right: 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
@@ -110,6 +118,7 @@
 
     &:first-child {
       min-height: 70px;
+      padding-top: 0;
     }
 
     &:last-child {
@@ -120,7 +129,7 @@
 
 .facts__item-text {
   margin: 0;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.5px;
   text-align: center;
 
   @include fstyle(22px, 34px, $black);
