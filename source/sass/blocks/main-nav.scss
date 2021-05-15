@@ -98,10 +98,11 @@
   @include fstyle(16px, 32px, rgba($white, 0.7), 300);
 
   &:nth-child(2n) {
-    margin-right: 132px;
+    margin-right: 131px;
   }
 
   &:last-child {
+    margin-left: 2px;
     margin-right: 0;
   }
 

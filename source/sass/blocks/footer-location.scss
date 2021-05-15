@@ -28,9 +28,10 @@
 }
 
 .page-footer__location h2 {
+  width: 226px;
   margin: 0;
   margin-bottom: 30px;
-  padding-left: 360px;
+  padding-left: 365px;
   letter-spacing: -0.15px;
 
   @include fstyle(30px, 30px, $very-dark-black, 600);
