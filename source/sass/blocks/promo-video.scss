@@ -92,7 +92,7 @@
 
   @media (max-width: $mobile-width-only) {
     top: 351px;
-    left: 49vw;
+    left: 50vw;
     margin-left: -33px;
     height: 65px;
     width: 65px;
@@ -136,6 +136,10 @@
     letter-spacing: -0.12px;
 
     @include fstyle(24px, 30px, $white, 600);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 19px;
   }
 }
 

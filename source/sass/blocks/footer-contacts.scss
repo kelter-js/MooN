@@ -15,9 +15,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 171px;
-    margin: 0 auto;
-    margin-top: 31px;
+    width: 227px;
+    margin-left: 17.1vw;
+    margin-top: 20px;
     margin-bottom: 51px;
     padding-left: 0;
   }
@@ -61,7 +61,7 @@
 
   @media (max-width: $mobile-width-only) {
     width: 227px;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
     margin-right: 0;
 
     &::before {
@@ -87,6 +87,11 @@
 
   @media (max-width: $mobile-width-only) {
     width: 163px;
-    margin-left: 22px;
+    margin-left: 20px;
+
+    &::before {
+      top: -1px;
+      left: -32px;
+    }
   }
 }

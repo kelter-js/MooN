@@ -49,7 +49,7 @@
   @media (max-width: $mobile-width-only) {
     width: 42.5vw;
     margin-bottom: 20px;
-    padding-left: 24vw;
+    padding-left: 23.8vw;
     letter-spacing: -0.1px;
 
     @include fstyle(18px, 30px, $very-dark-black, 600);
@@ -73,8 +73,8 @@
 
   @media (max-width: $mobile-width-only) {
     width: 83vw;
-    margin-bottom: 25px;
-    padding-left: 3vw;
+    margin-bottom: 19px;
+    padding-left: 3.6vw;
   }
 }
 
@@ -104,5 +104,6 @@
 
   @media (max-width: $mobile-width-only) {
     height: 250px;
+    margin-left: -16px;
   }
 }

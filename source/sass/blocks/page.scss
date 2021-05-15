@@ -43,11 +43,3 @@ body {
     }
   }
 }
-
-.page-header__logo {
-  @media (min-width: $mobile-width) and (max-width: $tablet-width-only) {
-    position: absolute;
-    top: 25px;
-    left: 21px;
-  }
-}

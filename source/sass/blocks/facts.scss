@@ -58,7 +58,7 @@
   @media (max-width: $mobile-width-only) {
     width: 90.6vw;
     margin-left: 0;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
   }
 }
 
@@ -126,11 +126,29 @@
   @media (max-width: $mobile-width-only) {
     width: 82vw;
     min-height: 80px;
-    margin-bottom: 80.7px;
+    margin-bottom: 85px;
+
+    &::before {
+      left: 48.5%;
+    }
 
     &:first-child {
       min-height: 70px;
       padding-top: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-bottom: 80px;
+
+      &::before {
+        top: -47px;
+      }
+    }
+
+    &:nth-child(3n) {
+      &::before {
+        top: -47px;
+      }
     }
 
     &:last-child {

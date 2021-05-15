@@ -5,9 +5,13 @@
   width: 67.6px;
   height: 20.2px;
 
-  @media (min-width: $mobile-width) and (max-width: $tablet-width-only) {
+  @media (max-width: $tablet-width-only) {
     top: 25px;
     left: 16px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    left: 17px;
   }
 }
 
@@ -65,6 +69,7 @@
 
   @media (max-width: $mobile-width-only) {
     width: 90vw;
+    margin-bottom: 20px;
   }
 }
 
@@ -141,7 +146,7 @@
 
   @media (max-width: $mobile-width-only) {
     width: 90vw;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 }
 
@@ -177,6 +182,13 @@
     padding-left: 22px;
     padding-top: 16px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 81.8vw;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-top: 17px;
+  }
 }
 
 .page-header__form input[type="tel"] {
@@ -197,5 +209,10 @@
   @media (max-width: $tablet-width-only) {
     padding-top: 15px;
     padding-left: 49px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 90vw;
+    padding-left: 32px;
   }
 }

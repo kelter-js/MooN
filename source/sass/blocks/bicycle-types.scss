@@ -36,6 +36,7 @@
 
   @media (max-width: $mobile-width-only) {
     width: 230px;
+    margin-top: 46px;
   }
 }
 
@@ -52,10 +53,10 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width: 288px;
+    width: 278px;
     margin: 0 auto;
     margin-bottom: 50px;
-    justify-content: normal;
+    padding-right: 10px;
     flex-direction: column;
   }
 }
@@ -163,12 +164,13 @@
 
   @media (max-width: $mobile-width-only) {
     margin-bottom: 40px;
-    margin-left: 15px;
+    margin-left: 8px;
     margin-right: 0;
 
     &:last-child {
       margin-bottom: 0;
       margin-top: 0;
+      margin-left: 8px;
 
       &::before {
         right: -15px;
