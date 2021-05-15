@@ -108,6 +108,18 @@
 
     &:first-child {
       padding-top: 0;
+
+      &::before {
+        top: -55px;
+      }
+    }
+
+    &:nth-child(2n) {
+      margin-top: -4px;
+    }
+
+    &:last-child {
+      margin-top: 0px;
     }
   }
 

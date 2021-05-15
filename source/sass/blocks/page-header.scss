@@ -30,10 +30,10 @@
   @media (max-width: $tablet-width-only) {
     min-height: 126px;
     width: 68vw;
-    margin-top: 134px;
-    margin-left: 11vw;
+    margin-top: 136px;
+    margin-left: 11.5vw;
     margin-right: 0;
-    margin-bottom: 150px;
+    margin-bottom: 148px;
     overflow: visible;
   }
 
@@ -56,7 +56,7 @@
   @media (max-width: $tablet-width-only) {
     width: 68vw;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     letter-spacing: -0.15px;
     text-align: center;
 
@@ -76,7 +76,7 @@
 
   @media (max-width: $tablet-width-only) {
     width: 56.6vw;
-    margin-left: 6vw;
+    margin-left: 5.7vw;
     text-align: center;
     letter-spacing: -0.1px;
 
@@ -112,7 +112,7 @@
 
   @media (max-width: $tablet-width-only) {
     width: 42vw;
-    margin-left: 25vw;
+    margin-left: 24.5vw;
     margin-top: 0;
     overflow: visible;
   }
@@ -134,7 +134,7 @@
     width: 42vw;
     text-align: center;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
 
     @include fstyle(18px, 28px, $black, 600);
   }
@@ -171,6 +171,12 @@
   &::placeholder {
     @include fstyle(15px, 24px, $darkest-black);
   }
+
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 22px;
+    padding-left: 22px;
+    padding-top: 16px;
+  }
 }
 
 .page-header__form input[type="tel"] {
@@ -190,5 +196,6 @@
 
   @media (max-width: $tablet-width-only) {
     padding-top: 15px;
+    padding-left: 49px;
   }
 }
