@@ -16,9 +16,9 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width: 100vw;
+    width: $map-min-width;
     min-height: 250px;
-    margin-left: -4.6vw;
+    margin-left: -2.2vw;
   }
 }
 

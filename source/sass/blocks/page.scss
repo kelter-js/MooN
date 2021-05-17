@@ -3,7 +3,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 825px;
     background-image: url("../img/promo-desktop.png");
     background-repeat: no-repeat;
@@ -13,30 +13,24 @@ body {
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo-desktop@2x.png");
-      background-size: 1440px auto;
+      background-size: 100% auto;
     }
 
     @media (max-width: $tablet-width-only) {
-      width: 100vw;
       min-height: 340px;
       background-image: url("../img/promo-tablet.png");
-      background-size: 100vw auto;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo-tablet@2x.png");
-        background-size: 100vw auto;
       }
     }
 
     @media (max-width: $mobile-width-only) {
-      width: 100vw;
       min-height: 390px;
       background-image: url("../img/promo-mobile.png");
-      background-size: 100vw auto;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo-mobile@2x.png");
-        background-size: 100vw auto;
       }
     }
   }
