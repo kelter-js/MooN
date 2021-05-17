@@ -150,7 +150,8 @@
 
 .main-nav__navigation {
   position: relative;
-  width: 873.5px;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 21px;
   padding-left: 20px;
 
@@ -168,6 +169,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    display: block;
     min-height: 568px;
     width: 100vw;
     padding-top: 100px;

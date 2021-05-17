@@ -6,7 +6,7 @@
 
   @media (max-width: $tablet-width-only) {
     min-height: 949px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -66,7 +66,7 @@
   margin-right: 50px;
   z-index: 0;
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
     margin-top: -2px;
 
@@ -131,7 +131,7 @@
       margin-top: 0;
     }
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-left: 20.9vw;
       margin-top: 49px;
 
@@ -167,7 +167,7 @@
     margin-left: 8px;
     margin-right: 0;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-bottom: 0;
       margin-top: 0;
       margin-left: 8px;
