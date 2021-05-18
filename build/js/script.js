@@ -6,6 +6,7 @@ const PHONE_ELEMENT = document.querySelector('#tel');
 const MAP_IMAGE_ELEMENT = document.querySelector('.page-footer__map-wrapper');
 const MAP_INTERACTIVE_ELEMENT = document.querySelector('.page-footer__map-interactive');
 const SUBMIT_ELEMENT = document.querySelector('form');
+const BODY_ELEMENT = document.querySelector('body');
 
 const INVISIBLE_MAP_IMAGE_CLASS = 'page-footer__map-wrapper--invisible';
 const INVISIBLE_MAP_INTERACTIVE_CLASS = 'page-footer__map-interactive--invisible';
@@ -22,9 +23,11 @@ if (NAVIGATION_ELEMENT) {
     if (NAVIGATION_ELEMENT.classList.contains('main-nav--closed')) {
       NAVIGATION_ELEMENT.classList.remove('main-nav--closed');
       NAVIGATION_ELEMENT.classList.add('main-nav--opened');
+      BODY_ELEMENT.classList.add('page-body');
     } else {
       NAVIGATION_ELEMENT.classList.add('main-nav--closed');
       NAVIGATION_ELEMENT.classList.remove('main-nav--opened');
+      BODY_ELEMENT.classList.remove('page-body');
     }
   };
   TOGGLE_NAVIGATION_BUTTON.addEventListener('click', onClickToggleNavigation);
