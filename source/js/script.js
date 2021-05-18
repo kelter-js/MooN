@@ -5,8 +5,16 @@ const TOGGLE_NAVIGATION_BUTTON = document.querySelector('.main-nav__toggle');
 const PHONE_ELEMENT = document.querySelector('#tel');
 const MAP_IMAGE_ELEMENT = document.querySelector('.page-footer__map-wrapper');
 const MAP_INTERACTIVE_ELEMENT = document.querySelector('.page-footer__map-interactive');
+const SUBMIT_ELEMENT = document.querySelector('form');
+
 const INVISIBLE_MAP_IMAGE_CLASS = 'page-footer__map-wrapper--invisible';
 const INVISIBLE_MAP_INTERACTIVE_CLASS = 'page-footer__map-interactive--invisible';
+const MIN_RANGE = 4;
+const MAX_RANGE = 17;
+const MASK_LENGTH = 10;
+const DEFAULT_VALUE = '_';
+const DEFAULT_MASK = `+7 (___) ___-__-__`;
+const VALIDITY_MESSAGE = 'Телефон должен содержать минимум 10 цифр';
 
 if (NAVIGATION_ELEMENT) {
   NAVIGATION_ELEMENT.classList.remove('main-nav--nojs');
@@ -35,12 +43,6 @@ if (PHONE_ELEMENT) {
     '_',
     '_',
   ];
-
-  const MIN_RANGE = 4;
-  const MAX_RANGE = 17;
-  const MASK_LENGTH = 10;
-  const DEFAULT_VALUE = '_';
-  const DEFAULT_MASK = `+7 (___) ___-__-__`;
 
   const ALLOWED_RANGE = [
     4,
@@ -153,6 +155,7 @@ if (PHONE_ELEMENT) {
     }
 
     evt.preventDefault();
+    PHONE_ELEMENT.setCustomValidity('');
     let currentCaretPosition = PHONE_ELEMENT.selectionStart;
 
     if (+pressedButton || pressedButton === ALLOWED_PRESSED_KEYS[1]) {
@@ -206,6 +209,19 @@ if (PHONE_ELEMENT) {
   PHONE_ELEMENT.addEventListener('focus', onFocus);
   PHONE_ELEMENT.addEventListener('blur', onBlur);
   PHONE_ELEMENT.addEventListener('paste', onPaste);
+}
+
+if (SUBMIT_ELEMENT) {
+  const onSubmit = (evt) => {
+    let currentLength = PHONE_ELEMENT.value.split('').slice(MIN_RANGE).filter((item)=>+item).length;
+    console.log(currentLength);
+    if (currentLength < MASK_LENGTH) {
+      evt.preventDefault();
+      PHONE_ELEMENT.setCustomValidity(VALIDITY_MESSAGE);
+      PHONE_ELEMENT.reportValidity();
+    }
+  }
+  SUBMIT_ELEMENT.addEventListener('submit', onSubmit);
 }
 
 if (MAP_IMAGE_ELEMENT) {

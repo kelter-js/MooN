@@ -203,6 +203,7 @@
   padding-bottom: 14px;
   background: $light-blue;
   border: none;
+  cursor: pointer;
 
   @include fstyle(15px, 21px, $black, 600);
 
