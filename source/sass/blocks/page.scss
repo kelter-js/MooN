@@ -3,11 +3,11 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    width: 100%;
+    width: $desktop-background-width;
     min-height: 825px;
     background-image: url("../img/promo-desktop.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left top;
     background-color: $also-dark-color;
     z-index: -1;
 

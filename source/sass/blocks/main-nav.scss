@@ -92,13 +92,13 @@
 }
 
 .main-nav__navigation a {
-  margin-right: 128px;
+  margin-right: 132px;
   text-decoration: none;
 
   @include fstyle(16px, 32px, rgba($white, 0.7), 300);
 
   &:nth-child(2n) {
-    margin-right: 131px;
+    margin-right: 135px;
   }
 
   &:last-child {
@@ -161,7 +161,7 @@
     top: 62px;
     left: 0;
     height: 1px;
-    width: 100%;
+    width: 60.8vw;
     background-color: rgba($white, 0.2);
   }
 

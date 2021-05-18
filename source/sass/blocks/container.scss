@@ -1,19 +1,19 @@
 .container {
   width: 1166px;
   margin: 0 auto;
-  padding-left: $desktop-scrollbar-padding;
+  padding-left: 137px;
   padding-right: $desktop-scrollbar-padding;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     width: 91vw;
     margin: 0 auto;
-    padding-left: $tablet-scrollbar-padding;
+    padding-left: 4.5vw;
     padding-right: $tablet-scrollbar-padding;
   }
 
   @media (max-width: $mobile-width-only) {
     width: 90vw;
-    padding-left: $mobile-scrollbar-padding;
+    padding-left: 2.04vw;
     padding-right: $mobile-scrollbar-padding;
   }
 }
