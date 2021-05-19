@@ -7,6 +7,8 @@ const MAP_IMAGE_ELEMENT = document.querySelector('.page-footer__map-wrapper');
 const MAP_INTERACTIVE_ELEMENT = document.querySelector('.page-footer__map-interactive');
 const SUBMIT_ELEMENT = document.querySelector('form');
 const BODY_ELEMENT = document.querySelector('body');
+const LOGO_ELEMENT = document.querySelector('.page-header__logo');
+const HEADER_ELEMENT = document.querySelector('.page-header__info');
 
 const INVISIBLE_MAP_IMAGE_CLASS = 'page-footer__map-wrapper--invisible';
 const INVISIBLE_MAP_INTERACTIVE_CLASS = 'page-footer__map-interactive--invisible';
@@ -16,18 +18,25 @@ const MASK_LENGTH = 10;
 const DEFAULT_VALUE = '_';
 const DEFAULT_MASK = `+7 (___) ___-__-__`;
 const VALIDITY_MESSAGE = 'Телефон должен содержать минимум 10 цифр';
+const NAVIGATION_REMOVE_CLASS = 'main-nav--nojs';
+const BODY_REMOVE_CLASS = 'page-body--nojs';
+const LOGO_REMOVE_CLASS = 'page-header__logo--nojs';
+const HEADER_REMOVE_CLASS = 'page-header__info--nojs';
 
 if (NAVIGATION_ELEMENT) {
-  NAVIGATION_ELEMENT.classList.remove('main-nav--nojs');
+  NAVIGATION_ELEMENT.classList.remove(NAVIGATION_REMOVE_CLASS);
+  BODY_ELEMENT.classList.remove(BODY_REMOVE_CLASS);
+  LOGO_ELEMENT.classList.remove(LOGO_REMOVE_CLASS);
+  HEADER_ELEMENT.classList.remove(HEADER_REMOVE_CLASS);
   const onClickToggleNavigation = () => {
     if (NAVIGATION_ELEMENT.classList.contains('main-nav--closed')) {
       NAVIGATION_ELEMENT.classList.remove('main-nav--closed');
       NAVIGATION_ELEMENT.classList.add('main-nav--opened');
-      BODY_ELEMENT.classList.add('page-body');
+      BODY_ELEMENT.classList.add('page-body-no-scroll');
     } else {
       NAVIGATION_ELEMENT.classList.add('main-nav--closed');
       NAVIGATION_ELEMENT.classList.remove('main-nav--opened');
-      BODY_ELEMENT.classList.remove('page-body');
+      BODY_ELEMENT.classList.remove('page-body-no-scroll');
     }
   };
   TOGGLE_NAVIGATION_BUTTON.addEventListener('click', onClickToggleNavigation);

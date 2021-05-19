@@ -170,7 +170,7 @@
     left: 0;
     top: 0;
     display: block;
-    min-height: 568px;
+    min-height: 468px;
     width: 100vw;
     padding-top: 100px;
     padding-left: 0;
@@ -182,13 +182,6 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-height: 568px;
-    width: 100vw;
-    padding-top: 100px;
-    background-color: $white;
     z-index: 1;
   }
 }

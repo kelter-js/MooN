@@ -15,6 +15,12 @@
   }
 }
 
+.page-header__logo--nojs {
+  @media (max-width: $tablet-width-only) {
+    top: 593px;
+  }
+}
+
 .page-header {
   margin-bottom: 151px;
 
@@ -48,6 +54,10 @@
     margin-bottom: 140px;
     margin-top: 120px;
   }
+}
+
+.page-header__info--nojs {
+  margin-top: 678px;
 }
 
 .page-header h2 {

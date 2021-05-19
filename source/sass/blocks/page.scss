@@ -36,7 +36,15 @@ body {
   }
 }
 
-.page-body {
+.page-body-no-scroll {
   height: 100%;
   overflow: hidden;
+}
+
+.page-body--nojs {
+  @media (max-width: $tablet-width-only) {
+    &::before {
+      top: 568px;
+    }
+  }
 }
