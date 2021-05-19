@@ -1,4 +1,6 @@
 .page-footer__contacts {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 29px;
   margin-bottom: 98px;
   padding-left: 342px;
@@ -12,8 +14,6 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: 227px;
     margin-left: 17.1vw;
@@ -71,6 +71,7 @@
 }
 
 .page-footer__contacts a[href^="tel"] {
+  margin-top: 6px;
   &::before {
     top: -4px;
     left: -37px;
