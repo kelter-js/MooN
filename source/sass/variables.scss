@@ -18,7 +18,7 @@ $mobile-width-only: 767px;
 $tablet-width: 768px;
 $tablet-width-only: 1023px;
 
-$map-min-width: calc(335px - (100vw - 100%));
+$map-min-width: calc(100vw - (100vw - 100%));
 $min-width: calc(320px - (100vw - 100%));
 $desktop-scrollbar-padding: calc(137px - (100vw - 100%));
 $tablet-scrollbar-padding: calc(4.5vw - (100vw - 100%));
