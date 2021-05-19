@@ -27,6 +27,7 @@ body {
 
     @media (max-width: $mobile-width-only) {
       min-height: 390px;
+      background-position: center bottom;
       background-image: url("../img/promo-mobile.png");
 
       @media (min-resolution: 2dppx) {

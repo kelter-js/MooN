@@ -24,6 +24,10 @@
     cursor: pointer;
     border: none;
   }
+
+  @media (max-width: $mobile-width) {
+    right: -4px;
+  }
 }
 
 .main-nav--opened {
@@ -139,10 +143,10 @@
       position: absolute;
       top: 23px;
       right: 20px;
-      width: 10px;
-      height: 10px;
-      border-top: 3px solid rgba($lightest-grey, 0.5);
-      border-right: 3px solid rgba($lightest-grey, 0.5);
+      width: 7px;
+      height: 7px;
+      border-top: 2px solid rgba($lightest-grey, 0.5);
+      border-right: 2px solid rgba($lightest-grey, 0.5);
       margin-right: 10px;
       transform: rotate(45deg);
     }
@@ -183,6 +187,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    margin-left: -9px;
     z-index: 1;
   }
 }

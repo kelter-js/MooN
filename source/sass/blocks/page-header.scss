@@ -1,13 +1,13 @@
 .page-header__logo {
   position: absolute;
   top: 319px;
-  left: 19.5%;
+  left: 19.7%;
   width: 67.6px;
   height: 20.2px;
 
   @media (max-width: $tablet-width-only) {
     top: 25px;
-    left: 16px;
+    left: 22px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -57,7 +57,9 @@
 }
 
 .page-header__info--nojs {
-  margin-top: 678px;
+  @media (max-width: $tablet-width-only) {
+    margin-top: 678px;
+  }
 }
 
 .page-header h2 {

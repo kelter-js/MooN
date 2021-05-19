@@ -49,15 +49,16 @@
   list-style: none;
 
   @media (max-width: $tablet-width-only) {
-    margin-left: 7vw;
+    justify-content: center;
+    margin-left: 6.7vw;
   }
 
   @media (max-width: $mobile-width-only) {
+    flex-direction: column;
     width: 278px;
     margin: 0 auto;
     margin-bottom: 50px;
     padding-right: 10px;
-    flex-direction: column;
   }
 }
 
@@ -126,6 +127,7 @@
     flex-direction: column;
     width: 270px;
     margin-right: 6.5vw;
+    margin-bottom: 50px;
 
     &:first-child,
     &:nth-child(2n) {
@@ -133,8 +135,7 @@
     }
 
     &:nth-child(3n) {
-      margin-left: 20.9vw;
-      margin-top: 49px;
+      margin-right: 50px;
 
       &::before {
         top: -20px;
