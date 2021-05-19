@@ -143,6 +143,21 @@
       position: absolute;
       top: 23px;
       right: 20px;
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid rgba($lightest-grey, 0.5);
+      border-right: 3px solid rgba($lightest-grey, 0.5);
+      margin-right: 10px;
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 20px;
       width: 7px;
       height: 7px;
       border-top: 2px solid rgba($lightest-grey, 0.5);
