@@ -193,7 +193,7 @@
   @media (max-width: $tablet-width-only) {
     margin-bottom: 22px;
     padding-left: 22px;
-    padding-top: 16px;
+    padding-top: 17px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -204,9 +204,17 @@
   }
 }
 
+.page-header__form input::-moz-placeholder {
+  @include fstyle(15px, 24px, $darkest-black);
+}
+
 .page-header__form input[type="tel"] {
   letter-spacing: 0.3px;
   padding-top: 18px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 17px;
+  }
 }
 
 .page-header__form input[type="submit"] {
@@ -228,5 +236,57 @@
   @media (max-width: $mobile-width-only) {
     width: 90vw;
     padding-left: 32px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .page-header__form input {
+    padding-top: 12px;
+    padding-bottom: 18px;
+
+    &::-moz-placeholder {
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet-width-only) {
+      padding-left: 22px;
+      padding-top: 12px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-left: 25px;
+      padding-top: 12px;
+    }
+  }
+
+  .page-header__form input[type="tel"] {
+    padding-top: 12px;
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .page-header__form input {
+      padding-top: 12px;
+      padding-bottom: 18px;
+
+      &::-moz-placeholder {
+        opacity: 1;
+      }
+
+      @media (max-width: $tablet-width-only) {
+        padding-left: 22px;
+        padding-top: 12px;
+      }
+
+      @media (max-width: $mobile-width-only) {
+        padding-left: 25px;
+        padding-top: 12px;
+      }
+    }
+
+    .page-header__form input[type="tel"] {
+      padding-top: 12px;
+    }
   }
 }
