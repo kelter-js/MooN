@@ -167,6 +167,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 2%;
+  }
 }
 
 .page-header__form input {
@@ -238,13 +242,13 @@
     padding-left: 32px;
   }
 }
-
 @-moz-document url-prefix() {
   .page-header__form input {
-    padding-top: 12px;
-    padding-bottom: 18px;
+    padding-top: 14px;
+    padding-bottom: 16px;
 
     &::-moz-placeholder {
+      line-height: 16px;
       opacity: 1;
     }
 
@@ -267,8 +271,9 @@
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
     .page-header__form input {
-      padding-top: 12px;
-      padding-bottom: 18px;
+      line-height: 20px;
+      padding-top: 14px;
+      padding-bottom: 14px;
 
       &::-moz-placeholder {
         opacity: 1;
@@ -286,7 +291,7 @@
     }
 
     .page-header__form input[type="tel"] {
-      padding-top: 12px;
+      padding-top: 14px;
     }
   }
 }

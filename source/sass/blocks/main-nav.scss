@@ -26,7 +26,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    right: -4px;
+    right: -8px;
   }
 }
 
@@ -97,7 +97,6 @@
 
 .main-nav__navigation a {
   margin-right: 132px;
-  margin-bottom: 9px;
   text-decoration: none;
 
   @include fstyle(16px, 32px, rgba($white, 0.7), 300);
@@ -174,6 +173,7 @@
   flex-wrap: wrap;
   padding-top: 21px;
   padding-left: 20px;
+  padding-bottom: 9px;
 
   &::before {
     content: "";
@@ -202,7 +202,14 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-left: -9px;
     z-index: 1;
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .main-nav__navigation a {
+      min-height: 32px;
+    }
   }
 }
