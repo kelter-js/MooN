@@ -3,6 +3,12 @@
   padding-left: 137px;
   padding-right: $desktop-scrollbar-padding;
 
+  @media (min-width: $desktop-width) and (max-width: $desktop-width-only) {
+    width: 81%;
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     width: 91vw;
     padding-left: 4.5vw;
