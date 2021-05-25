@@ -45,6 +45,10 @@
 
   @include fstyle(30px, 30px, $very-dark-black, 600);
 
+  @media (max-width: $desktop-width-only) {
+    margin-left: 34.4%;
+  }
+
   @media (max-width: $tablet-width-only) {
     width: 37.7vw;
     margin-left: 26.5vw;
@@ -102,6 +106,11 @@
     &::before {
       content: "04";
     }
+  }
+
+  @media (max-width: $desktop-width-only) {
+    width: 22.5%;
+    margin-right: 3.2%;
   }
 
   @media (max-width: $tablet-width-only) {

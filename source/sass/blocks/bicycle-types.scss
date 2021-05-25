@@ -48,6 +48,10 @@
   padding: 0;
   list-style: none;
 
+  @media (max-width: $desktop-width-only) {
+    margin-left: 1.7%;
+  }
+
   @media (max-width: $tablet-width-only) {
     justify-content: center;
     margin-left: 6.7vw;
@@ -121,6 +125,11 @@
     }
   }
 
+  @media (max-width: $desktop-width-only) {
+    width: 29.3%;
+    margin-right: 4.2%;
+  }
+
   @media (max-width: $tablet-width-only) {
     display: flex;
     align-items: center;
@@ -189,6 +198,10 @@
 
 
 .bicycle-types img {
+  @media (max-width: $desktop-width-only) {
+    width: 100%;
+  }
+
   @media (max-width: $tablet-width-only) {
     width: 270px;
     height: 300px;

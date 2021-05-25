@@ -21,6 +21,12 @@
   left: 50vw;
   margin-left: -464.5px;
 
+  @media (max-width: $desktop-width-only) {
+    width: 64.5%;
+    $width: 64.5%;
+    margin-left: calc(-1 * (#{$width}/2));
+  }
+
   @media (max-width: $tablet-width-only) {
     top: 216px;
     width: 503px;
@@ -132,6 +138,11 @@
 
   @include fstyle(30px, 30px, $white, 600);
 
+  @media (max-width: $desktop-width-only) {
+    width: 42.9%;
+    text-align: center;
+  }
+
   @media (max-width: $tablet-width-only) {
     width: 280px;
     letter-spacing: -0.12px;
@@ -150,6 +161,11 @@
   text-align: center;
 
   @include fstyle(16px, 28px, rgba($white, 0.7), 300);
+
+  @media (max-width: $desktop-width-only) {
+    width: 38%;
+    text-align: center;
+  }
 
   @media (max-width: $tablet-width-only) {
     width: 55.8vw;

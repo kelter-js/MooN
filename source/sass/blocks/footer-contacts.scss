@@ -5,6 +5,12 @@
   margin-bottom: 98px;
   padding-left: 342px;
 
+  @media (max-width: $desktop-width-only) {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+
   @media (max-width: $tablet-width-only) {
     width: 517px;
     margin-top: 11px;

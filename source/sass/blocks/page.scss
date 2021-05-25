@@ -4,17 +4,17 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: $desktop-background-width;
+    width: 100%;
     min-height: 825px;
     background-image: url("../img/promo-desktop.png");
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-size: cover;
     background-color: $also-dark-color;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promo-desktop@2x.png");
-      background-size: 100% auto;
+      background-size: cover;
     }
 
     @media (max-width: $tablet-width-only) {
