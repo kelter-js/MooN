@@ -6,16 +6,15 @@
   padding-left: 342px;
 
   @media (max-width: $desktop-width-only) {
-    display: flex;
     justify-content: center;
     padding-left: 0;
   }
 
   @media (max-width: $tablet-width-only) {
     width: 517px;
+    margin: 0 auto;
     margin-top: 11px;
     margin-bottom: 53px;
-    margin-left: 14.5vw;
     padding-left: 0;
   }
 

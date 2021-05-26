@@ -125,6 +125,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    position: static;
     min-height: 750px;
   }
 }
@@ -239,6 +240,10 @@
   @media (max-width: $tablet-width-only) {
     padding-top: 17px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 25px;
+  }
 }
 
 .page-header__form input[type="submit"] {
@@ -267,7 +272,8 @@
     padding-left: 32px;
   }
 }
-@-moz-document url-prefix() {
+
+@-moz-document url-prefix("") {
   .page-header__form input {
     padding-top: 14px;
     padding-bottom: 16px;
@@ -293,7 +299,7 @@
   }
 }
 
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance:none) {
     .page-header__form input {
       line-height: 20px;

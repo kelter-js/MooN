@@ -233,7 +233,7 @@
   }
 }
 
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance:none) {
     .main-nav__navigation a {
       min-height: 32px;
