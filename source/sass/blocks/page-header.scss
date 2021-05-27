@@ -180,10 +180,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
-  @media (max-width: $mobile-width-only) {
-    margin-left: 2%;
-  }
 }
 
 .page-header__form input {
