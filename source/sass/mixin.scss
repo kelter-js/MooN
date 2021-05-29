@@ -5,3 +5,8 @@
   text-transform: $transform;
   font-weight: $font-weight;
 }
+
+@mixin imageWidth($width) {
+  width: $width;
+  margin-left: calc(-1 * (#{$width} / 2));
+}

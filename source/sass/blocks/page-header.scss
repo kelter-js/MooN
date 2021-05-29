@@ -5,6 +5,10 @@
   width: 67.6px;
   height: 20.2px;
 
+  @media (max-width: $desktop-width-only) {
+    left: 17.4%;
+  }
+
   @media (max-width: $tablet-width-only) {
     top: 25px;
     left: 22px;
@@ -45,11 +49,13 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 126px;
     width: 68vw;
+    margin: 0 auto;
     margin-top: 136px;
-    margin-left: 11.5vw;
-    margin-right: 0;
     margin-bottom: 148px;
     overflow: visible;
   }
@@ -77,7 +83,7 @@
   @include fstyle(46px, 64px, $white, 700);
 
   @media (max-width: $tablet-width-only) {
-    width: 68vw;
+    width: 525px;
     margin-top: 0;
     margin-bottom: 18px;
     letter-spacing: -0.15px;
@@ -100,7 +106,6 @@
 
   @media (max-width: $tablet-width-only) {
     width: 56.6vw;
-    margin-left: 5.7vw;
     text-align: center;
     letter-spacing: -0.1px;
 
@@ -121,6 +126,7 @@
   min-height: 825px;
 
   @media (max-width: $tablet-width-only) {
+    flex-direction: column;
     min-height: 683px;
   }
 

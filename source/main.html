@@ -115,18 +115,20 @@
         <div class="container">
           <h2>Видео про велосипеды</h2>
           <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для&nbsp;себя.</p>
-          <picture>
-            <source type="image/webp" media="(max-width: 768px)" srcset="img/video-thumbnail-mobile.webp 1x, img/video-thumbnail-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-thumbnail-tablet.webp 1x, img/video-thumbnail-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/video-thumbnail-desktop.webp 1x, img/video-thumbnail-desktop@2x.webp 2x">
-            <!--Без ретины: W - 288, H - 162, ретина: W - 576, H - 324-->
-            <source media="(max-width: 768px)" srcset="img/video-thumbnail-mobile.png 1x, img/video-thumbnail-mobile@2x.png 2x">
-            <!--Без ретины: W - 503, H - 282, ретина: W - 1006, H - 564-->
-            <source media="(max-width: 1023px)" srcset="img/video-thumbnail-tablet.png 1x, img/video-thumbnail-tablet@2x.png 2x">
-            <!--Без ретины: W - 929, H - 522, ретина: W - 1858, H - 1044-->
-            <img src="img/video-thumbnail-desktop.png" srcset="img/video-thumbnail-desktop@2x.png 2x" alt="Превью видеоролика о велосипедах" width="929" height="522">
-          </picture>
-          <button type="button" aria-label="Воспроизвести видео"></button>
+          <div class="bicycles-video__wrapper">
+            <picture>
+              <source type="image/webp" media="(max-width: 768px)" srcset="img/video-thumbnail-mobile.webp 1x, img/video-thumbnail-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-thumbnail-tablet.webp 1x, img/video-thumbnail-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-thumbnail-desktop.webp 1x, img/video-thumbnail-desktop@2x.webp 2x">
+              <!--Без ретины: W - 288, H - 162, ретина: W - 576, H - 324-->
+              <source media="(max-width: 768px)" srcset="img/video-thumbnail-mobile.png 1x, img/video-thumbnail-mobile@2x.png 2x">
+              <!--Без ретины: W - 503, H - 282, ретина: W - 1006, H - 564-->
+              <source media="(max-width: 1023px)" srcset="img/video-thumbnail-tablet.png 1x, img/video-thumbnail-tablet@2x.png 2x">
+              <!--Без ретины: W - 929, H - 522, ретина: W - 1858, H - 1044-->
+              <img src="img/video-thumbnail-desktop.png" srcset="img/video-thumbnail-desktop@2x.png 2x" alt="Превью видеоролика о велосипедах" width="929" height="522">
+            </picture>
+            <button type="button" aria-label="Воспроизвести видео"></button>
+          </div>
         </div>
       </section>
     </main>
