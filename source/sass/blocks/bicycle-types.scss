@@ -1,12 +1,10 @@
 .bicycle-types {
-  min-height: 1038px;
-  margin-bottom: 19px;
+  min-height: 1022px;
   background-color: $darker-grey;
   overflow: hidden;
 
   @media (max-width: $tablet-width-only) {
     min-height: 949px;
-    margin-bottom: 0;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -17,7 +15,7 @@
 .bicycle-types h2 {
   width: 288px;
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 134px;
   margin-bottom: 51px;
   letter-spacing: -0.15px;
 

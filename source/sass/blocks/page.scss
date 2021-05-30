@@ -19,6 +19,7 @@ body {
 
     @media (max-width: $tablet-width-only) {
       min-height: 340px;
+      width: 100vw;
       background-image: url("../img/promo-tablet.png");
 
       @media (min-resolution: 2dppx) {

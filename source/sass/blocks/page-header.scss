@@ -55,8 +55,8 @@
     min-height: 126px;
     width: 68vw;
     margin: 0 auto;
-    margin-top: 136px;
-    margin-bottom: 148px;
+    margin-top: 102px;
+    margin-bottom: 150px;
     overflow: visible;
   }
 
@@ -85,7 +85,7 @@
   @media (max-width: $tablet-width-only) {
     width: 525px;
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     letter-spacing: -0.15px;
     text-align: center;
 
@@ -241,6 +241,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding-top: 17px;
+    padding-left: 22px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -266,7 +267,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding-top: 15px;
-    padding-left: 49px;
+    padding-left: 1px;
   }
 
   @media (max-width: $mobile-width-only) {

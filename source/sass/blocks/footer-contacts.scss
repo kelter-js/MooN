@@ -1,9 +1,11 @@
 .page-footer__contacts {
   display: flex;
   flex-wrap: wrap;
+  width: 558px;
+  margin: 0 auto;
   margin-top: 29px;
   margin-bottom: 98px;
-  padding-left: 342px;
+  padding-left: 77px;
 
   @media (max-width: $desktop-width-only) {
     justify-content: center;
@@ -15,7 +17,7 @@
     margin: 0 auto;
     margin-top: 11px;
     margin-bottom: 53px;
-    padding-left: 0;
+    padding-left: 30px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -94,6 +96,7 @@
   @media (max-width: $mobile-width-only) {
     width: 163px;
     margin-left: 51px;
+    margin-bottom: 19px;
 
     &::before {
       top: -1px;
