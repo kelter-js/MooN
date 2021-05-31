@@ -257,6 +257,7 @@
   background: $light-blue;
   border: none;
   cursor: pointer;
+  -webkit-appearance: none;
 
   @include fstyle(15px, 21px, $black, 600);
 
