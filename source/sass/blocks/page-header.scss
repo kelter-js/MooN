@@ -262,7 +262,7 @@
 
   @media (max-width: $desktop-width-only) {
     padding-left: 4%;
-    padding-right: 0;
+    padding-right: 4%;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -272,7 +272,6 @@
 
   @media (max-width: $mobile-width-only) {
     width: 90vw;
-    padding-left: 32px;
   }
 }
 
@@ -326,6 +325,12 @@
 
     .page-header__form input[type="tel"] {
       padding-top: 14px;
+    }
+
+    .page-header__form input[type="submit"] {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 51px;
     }
   }
 }

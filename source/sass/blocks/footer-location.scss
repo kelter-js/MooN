@@ -37,8 +37,8 @@
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    left: 0;
-    width: $map-min-width;
+    left: -6%;
+    width: 100vw;
     min-height: 250px;
   }
 }

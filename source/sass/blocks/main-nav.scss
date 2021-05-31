@@ -179,7 +179,7 @@
   padding-right: 20px;
   padding-bottom: 9px;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -201,7 +201,7 @@
     padding-right: 0;
     background-color: $white;
 
-    &::before {
+    &::after {
       display: none;
     }
   }
@@ -216,6 +216,13 @@
   @supports (-webkit-appearance:none) {
     .main-nav__navigation a {
       min-height: 32px;
+    }
+
+    .main-nav__navigation {
+      &::after {
+        position: static;
+        margin-top: 8px;
+      }
     }
   }
 }
