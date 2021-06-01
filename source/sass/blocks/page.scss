@@ -41,7 +41,12 @@ body {
 
 .page-body-no-scroll {
   height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+
+  .main-nav__navigation {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
 }
 
 .page-body--nojs {
